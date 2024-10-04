@@ -5,7 +5,7 @@ import "./App.css"
 
 function App() {
   const [count, setCount] = useState(0)
-  const [display, setDisplay] = useState(0)
+  const [display, setDisplay] = useState([])
 
   const handleClick = () => {
     fetch("http://localhost:5173")
@@ -31,6 +31,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+
       <h1>
         {display.map((number) => {
           return <p key={number}>{number}</p>
