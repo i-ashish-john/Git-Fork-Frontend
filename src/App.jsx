@@ -8,7 +8,7 @@ function App() {
   const [display, setDisplay] = useState([])
 
   const handleClick = () => {
-    fetch("http://localhost:5173")
+    fetch("http://localhost:4000/get-data")
       .then((response) => response.json())
       .then((result) => {
         setDisplay(result)
